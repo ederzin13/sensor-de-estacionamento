@@ -6,7 +6,6 @@ import Sensor from "./components/Sensor";
 export default function App() {
   return (
     <FullScreen>
-      <Title></Title>
       <Sensor></Sensor>
     </FullScreen>
   );

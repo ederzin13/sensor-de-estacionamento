@@ -21,7 +21,8 @@ export const globalStyles = StyleSheet.create({
     color: "#1f2f18",
   },
 
-  // mainColor: {
-  //   color: "#adb4aa",
-  // },
+  title: {
+    fontSize: 22,
+    fontWeight: "condensedBold",
+  },
 });
