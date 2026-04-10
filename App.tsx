@@ -1,12 +1,13 @@
-import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 import FullScreen from "./wrappers/FullScreen";
 import Title from "./components/Title";
+import Sensor from "./components/Sensor";
 
 export default function App() {
   return (
     <FullScreen>
       <Title></Title>
+      <Sensor></Sensor>
     </FullScreen>
   );
 }
