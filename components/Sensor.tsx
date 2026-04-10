@@ -15,20 +15,18 @@ export default function Sensor() {
     }, 3000);
   }, []);
 
+  //gera mensagens muito rápido
+  // useEffect(() => {
+  //   const alive = setInterval(() => {
+  //     console.log("Averiguando...");
+  //   }, 2000);
+  // }, [!loading]);
+
   if (loading) return <ActivityIndicator size="large"></ActivityIndicator>;
 
   return (
     <View>
       <Title></Title>
-      <TextInput
-        placeholder="Digite a distância em cm"
-        style={globalStyles.input}
-        autoFocus
-        keyboardType="numeric"
-        // onChangeText={(text) => {
-        //   setDistance();
-        // }}
-      ></TextInput>
     </View>
   );
 }
