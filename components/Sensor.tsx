@@ -2,10 +2,11 @@ import { View, Text, TextInput, ActivityIndicator } from "react-native";
 import React, { useEffect, useState } from "react";
 import { globalStyles } from "../styles/globalStyles";
 import Title from "./Title";
+import Display from "./Display";
 
 export default function Sensor() {
   const [loading, setLoading] = useState<boolean>(true);
-  const [distance, setDistance] = useState<number>(0);
+  const [distance, setDistance] = useState<number>(100);
 
   useEffect(() => {
     if (loading) console.log("Sistema de sensores iniciando...");
@@ -25,8 +26,9 @@ export default function Sensor() {
   if (loading) return <ActivityIndicator size="large"></ActivityIndicator>;
 
   return (
-    <View>
+    <View style={[globalStyles.container, globalStyles.center]}>
       <Title></Title>
+      <Display value={distance}></Display>
     </View>
   );
 }

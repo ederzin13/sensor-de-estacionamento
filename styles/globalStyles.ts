@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 export const globalStyles = StyleSheet.create({
   container: {
     flex: 1,
-    gap: 20,
+    gap: 30,
   },
 
   center: {
@@ -24,5 +24,21 @@ export const globalStyles = StyleSheet.create({
   title: {
     fontSize: 22,
     fontWeight: "condensedBold",
+  },
+
+  //display
+  displayContainer: {
+    height: 60,
+    width: 90,
+    backgroundColor: "#000",
+    borderColor: "#a9cfa0",
+    borderWidth: 2,
+    borderRadius: 10,
+  },
+
+  displayText: {
+    fontSize: 20,
+    fontWeight: "bold",
+    color: "#45bb00",
   },
 });
