@@ -13,14 +13,13 @@ import Ionicons, {
 
 type BtnProps = {
   icon: IoniconsIconName;
+  setDistance: () => void;
 };
 
-export default function Btn({ icon }: BtnProps) {
+export default function Btn({ icon, setDistance }: BtnProps) {
   return (
-    <Pressable>
-      <TouchableOpacity style={globalStyles.button}>
-        <Ionicons name={icon} style={globalStyles.icon}></Ionicons>
-      </TouchableOpacity>
-    </Pressable>
+    <TouchableOpacity style={globalStyles.button} onPress={setDistance}>
+      <Ionicons name={icon} style={globalStyles.icon}></Ionicons>
+    </TouchableOpacity>
   );
 }

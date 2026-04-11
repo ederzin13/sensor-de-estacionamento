@@ -1,4 +1,4 @@
-import { View, ActivityIndicator } from "react-native";
+import { View, ActivityIndicator, Alert } from "react-native";
 import React, { useEffect, useState } from "react";
 import { globalStyles } from "../styles/globalStyles";
 import Title from "./Title";
@@ -18,12 +18,15 @@ export default function Sensor() {
     }, 3000);
   }, []);
 
-  //gera mensagens muito rápido
-  // useEffect(() => {
-  //   const alive = setInterval(() => {
-  //     console.log("Averiguando...");
-  //   }, 2000);
-  // }, [!loading]);
+  useEffect(() => {
+    if (distance <= 20) Alert.alert("⚠️ PERIGO: Muito Próximo!");
+  }, [distance]);
+
+  useEffect(() => {
+    setInterval(() => {
+      console.log("Averiguando...");
+    }, 2000);
+  }, []);
 
   if (loading) return <ActivityIndicator size="large"></ActivityIndicator>;
 
@@ -32,8 +35,18 @@ export default function Sensor() {
       <Title></Title>
       <Display value={distance}></Display>
       <BtnContainer>
-        <Btn icon="add-circle-outline"></Btn>
-        <Btn icon="remove-circle-outline"></Btn>
+        <Btn
+          icon="add-circle-outline"
+          setDistance={() => {
+            setDistance(distance + 10);
+          }}
+        ></Btn>
+        <Btn
+          icon="remove-circle-outline"
+          setDistance={() => {
+            setDistance(distance - 10);
+          }}
+        ></Btn>
       </BtnContainer>
     </View>
   );
