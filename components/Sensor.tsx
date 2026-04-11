@@ -27,14 +27,16 @@ export default function Sensor() {
       console.log("Averiguando...");
     }, 2000);
 
-    return () => {};
+    return () => {
+      console.log("Parando sensores!");
+    };
   }, []);
 
   if (loading) return <ActivityIndicator size="large"></ActivityIndicator>;
 
   return (
     <View style={[globalStyles.container, globalStyles.center]}>
-      <Title></Title>
+      <Title icon={distance > 20 ? "wifi" : "warning"}></Title>
       <Display value={distance}></Display>
       <BtnContainer>
         <Btn

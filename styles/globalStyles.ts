@@ -22,8 +22,8 @@ export const globalStyles = StyleSheet.create({
   },
 
   title: {
-    fontSize: 22,
-    fontWeight: "condensedBold",
+    fontSize: 50,
+    fontWeight: "bold",
   },
 
   //display
