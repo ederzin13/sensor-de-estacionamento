@@ -4,6 +4,7 @@ import { globalStyles } from "../styles/globalStyles";
 import Title from "./Title";
 import Display from "./Display";
 import BtnContainer from "./BtnContainer";
+import Btn from "./Btn";
 
 export default function Sensor() {
   const [loading, setLoading] = useState<boolean>(true);
@@ -30,7 +31,10 @@ export default function Sensor() {
     <View style={[globalStyles.container, globalStyles.center]}>
       <Title></Title>
       <Display value={distance}></Display>
-      <BtnContainer></BtnContainer>
+      <BtnContainer>
+        <Btn icon="add-circle-outline"></Btn>
+        <Btn icon="remove-circle-outline"></Btn>
+      </BtnContainer>
     </View>
   );
 }

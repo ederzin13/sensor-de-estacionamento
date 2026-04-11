@@ -17,10 +17,10 @@ type BtnProps = {
 
 export default function Btn({ icon }: BtnProps) {
   return (
-    <TouchableOpacity style={globalStyles.button}>
-      <Pressable>
+    <Pressable>
+      <TouchableOpacity style={globalStyles.button}>
         <Ionicons name={icon} style={globalStyles.icon}></Ionicons>
-      </Pressable>
-    </TouchableOpacity>
+      </TouchableOpacity>
+    </Pressable>
   );
 }
