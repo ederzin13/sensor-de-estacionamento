@@ -41,4 +41,24 @@ export const globalStyles = StyleSheet.create({
     fontWeight: "bold",
     color: "#45bb00",
   },
+
+  //buttons
+  button: {
+    height: 50,
+    width: 50,
+    backgroundColor: "#31b5a2",
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: 10,
+  },
+
+  buttonContainer: {
+    flexDirection: "row",
+    gap: 30,
+  },
+
+  icon: {
+    fontSize: 30,
+    color: "#dafed2",
+  },
 });

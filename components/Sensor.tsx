@@ -1,8 +1,9 @@
-import { View, Text, TextInput, ActivityIndicator } from "react-native";
+import { View, ActivityIndicator } from "react-native";
 import React, { useEffect, useState } from "react";
 import { globalStyles } from "../styles/globalStyles";
 import Title from "./Title";
 import Display from "./Display";
+import BtnContainer from "./BtnContainer";
 
 export default function Sensor() {
   const [loading, setLoading] = useState<boolean>(true);
@@ -29,6 +30,7 @@ export default function Sensor() {
     <View style={[globalStyles.container, globalStyles.center]}>
       <Title></Title>
       <Display value={distance}></Display>
+      <BtnContainer></BtnContainer>
     </View>
   );
 }

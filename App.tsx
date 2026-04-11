@@ -1,6 +1,5 @@
 import { StyleSheet, Text, View } from "react-native";
 import FullScreen from "./wrappers/FullScreen";
-import Title from "./components/Title";
 import Sensor from "./components/Sensor";
 
 export default function App() {
