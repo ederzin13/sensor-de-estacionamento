@@ -26,6 +26,8 @@ export default function Sensor() {
     setInterval(() => {
       console.log("Averiguando...");
     }, 2000);
+
+    return () => {};
   }, []);
 
   if (loading) return <ActivityIndicator size="large"></ActivityIndicator>;
