@@ -5,6 +5,7 @@ import Title from "./Title";
 import Display from "./Display";
 import BtnContainer from "./BtnContainer";
 import Btn from "./Btn";
+import Activate from "./Activate";
 
 export default function Sensor() {
   const [loading, setLoading] = useState<boolean>(true);
@@ -23,12 +24,13 @@ export default function Sensor() {
   }, [distance]);
 
   useEffect(() => {
-    setInterval(() => {
+    const interval = setInterval(() => {
       console.log("Averiguando...");
     }, 2000);
 
     return () => {
       console.log("Parando sensores!");
+      clearInterval(interval);
     };
   }, []);
 

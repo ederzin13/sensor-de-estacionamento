@@ -61,4 +61,19 @@ export const globalStyles = StyleSheet.create({
     fontSize: 30,
     color: "#dafed2",
   },
+
+  activate: {
+    height: 50,
+    width: 200,
+    backgroundColor: "#31b5a2",
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: 5,
+  },
+
+  activateBtnText: {
+    fontWeight: "700",
+    fontSize: 20,
+    color: "#fff",
+  },
 });
